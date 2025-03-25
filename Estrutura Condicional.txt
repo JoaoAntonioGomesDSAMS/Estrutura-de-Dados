@@ -1,0 +1,112 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+//Elaborar um algoritmo que lê 3 valores a,b,c e os escreve.
+//A seguir, encontre o maior dos 3 valores e o escreva com a mensagem : "É o maior ".
+
+    int a, b, c;
+    printf("Informe 3 valores e descubriremos qual o maior!");
+    scanf("%d%d%d",&a, &b, &c);
+    
+    if(a > b && a > c){
+        printf("o valor %d é o maior entre os 3 valores! :D", a);
+    }else if(b > c){
+        printf("o valor %d é o maior entre os 3 valores! :D", b);
+    }else{
+        printf("o valor %d é o maior entre os 3 valores! :D", c);
+    }
+    
+//Elaborar um algoritmo que lê 2 valores a e b
+//e os escreve com a mensagem: "São múltiplos" ou "Não são múltiplos".
+
+    int val1, val2;
+    printf("\nInsira 2 valores: ");
+    scanf("%d%d", &val1, &val2);
+    
+     if(val1%val2 == 0 || val2%val1 == 0){
+         printf("Os valores são múltiplo");
+     }else{
+         printf("Os valores não são múltiplos");
+     }
+     
+/*Elabore um algoritmo que dada a idade de um nadador classifica-o em uma das seguintes
+categorias:
+ 
+infantil A =  5 -  7 anos
+infantil B =  8 - 10 anos
+juvenil  A = 11 - 13 anos
+juvenil  B = 14 - 17 anos
+adulto = maiores de 18 anos*/ 
+
+    int idade;
+    printf("\nInforme a idade do nadador: ");
+    scanf("%d", &idade);
+    
+    if(idade >= 5 && idade <= 7){
+        printf("O nadador é da categoria Infantil A.");
+    }else if(idade<11){
+        printf("O nadador é da categoria Infantil B.");
+    }else if(idade<14){
+        printf("O nadador é da categoria Juvenil A.");
+    }else if(idade<18){
+        printf("O nadador é da categoria Juvenil B");
+    }else{
+        printf("O nadador é da categoria Adulto");
+    }
+    
+/*4. O cardápio de uma lanchonete é o seguinte:
+
+Especificação Código Preço
+Cachorro quente 100 1,20
+Bauru simples   101 1,30
+Bauru com ovo   102 1,50
+Hambúrger       103 1,20
+Cheeseburguer   104 1,30
+Refrigerante    105 1,00
+
+Escrever um algoritmo que leia o código do item pedido,
+a quantidade e calcule o valor a ser pago por aquele lanche.
+Considere que a cada execução somente será calculado um item.*/
+
+    int code, quant;
+    
+    printf(
+     "Especificação         Código      Preço\n"    
+     "Cachorro quente       100         1,20\n" 
+     "Bauru simples         101         1,30\n"
+     "Bauru com ovo         102         1,50\n"
+     "Hambúrger             103         1,20\n"
+     "Cheeseburguer         104         1,30\n"
+     "Refrigerante          105         1,00\n");
+     
+    printf("Digite o código do lanche: ");
+    scanf("%d", &code);
+    printf("Digite quantidade que deseja: ");
+    scanf("%d", &quant);
+    
+    if(code == 100){
+        printf("Seu cachorro quente vai custar: R$%f", 1.20*quant);
+    }else if(code == 103){
+        printf("Seu Hambúrger vai custar: R$%f", 1.20*quant);
+    }else if(code == 104){
+        printf("Seu Cheeseburguer vai custar: R$%f", 1.30*quant);
+    }else if(code == 105){
+        printf("Seu Refrigerante vai custar: R$%f", 1.00*quant);
+    }else if(code == 101){
+        printf("Seu Bauru simples vai custar: R$%f", 1.30*quant);
+    }else if(code == 102){
+        printf("Seu Bauru com ovo simples vai custar: R$%f", 1.50*quant);
+    }else{
+        printf("Código invalido, por favor consulte o cardapio");
+}
+
+}

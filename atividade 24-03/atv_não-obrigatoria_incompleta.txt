@@ -1,0 +1,56 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+// [ 1
+void mensagem() {
+    printf("Olá, mundo das funções!\n");
+}
+// 1]
+
+//  [ 2
+int dobro( int x){
+    int y = x*2;
+    return y;
+}
+//  2 ]
+
+// [3
+int soma(int a, int b){
+    int x = a+b;
+    return x;
+}
+// 3]
+
+int main()
+{
+//1. Escreva uma função chamada mensagem() que apenas imprime "Olá, mundo das funções!" e chame essa função a partir da main().
+
+    mensagem();    
+
+//2. Crie uma função dobro(int x) que recebe um número inteiro como parámetro e retorna o seu dobro. Use a função na main() e mostre o resultado.
+
+    int n1e2;
+    printf("Informe um valor que sera dobrado: ");
+    scanf("%d", &n1e2);
+    
+    printf("\nO valor de %d dobrado é: %d", n1e2, dobro(n1e2));
+    
+//3. Faça uma função soma(int a, int b) que retorna a soma de dois números inteiros. 
+//Solicite os dois números na main() e exiba o resultado da função.
+
+    int n1e3, n2e3;
+    printf("\nInforme 2 numeros para serem somados:\n");
+    scanf("%d%d", &n1e3, &n2e3);
+    
+    printf("\nO valor de %d + %d é: %d\n", n1e3, n2e3, soma(n1e3, n2e3));
+
+//4. Declare um vetor de 5 inteiros, atribua valores manualmente e use um for para imprimir cada valor na tela.
+
+//5. Leia 5 valores inteiros do teclado e armazene-os em um vetor. Depois, mostre os valores lidos.
+}

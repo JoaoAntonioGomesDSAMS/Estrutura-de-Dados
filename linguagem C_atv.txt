@@ -1,0 +1,137 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a, b;
+    //Faça um programa que receba dois números inteiros, calcule e imprima: • soma dos dois números;
+    
+    scanf("%d%d", &a, &b);
+    printf("Resultado da soma é: %d\n", a + b);
+    
+    //subtração do primeiro pelo segundo;
+    printf("Resultado da subtração do %d pelo %d: %d\n",a, b, a - b);
+    
+    //subtração do segundo pelo primeiro;
+    printf("Resultado da subtração do %d pelo %d: %d\n",b,a, b - a);
+    
+    //multiplicação dos dois números;
+    printf("Resultado da multiplicação de %d por %d é de: %d\n",a,b, a * b);
+    
+    //divisão do primeiro pelo segundo (resultado em real)
+    float num1,num2;
+    scanf("%f%f", &num1, &num2);
+    printf("Resultado da divisão de %f por %f: %f\n",num1,num2, num1 / num2);
+    
+    //divisão do segundo pelo primeiro (resultado em real);
+    printf("Resultado da divisão de %f por %f: %f\n",num2,num1, num2 / num1);
+    
+    //quociente inteiro da divisão do primeiro pelo segundo;
+    printf("Resultado do quociente inteiro do %d pelo %d por: %d\n",a,b, a / b);
+    
+    //quociente inteiro da divisão do segundo pelo primeiro;
+    printf("Resultado do quociente inteiro do %d pelo %d por: %d\n",b,a, b / a);
+    
+    //resto da divisão do primeiro pelo segundo;
+    printf("Resto da divisão do %d pelo %d por: %d\n",a,b, a % b);
+    
+    //resto da divisão do segundo pelo primeiro.
+    printf("Resto da divisão do %d pelo %d por: %d\n",b,a, b % a);
+
+    //2. Faça um programa que receba três notas de um aluno, 
+    //calcule e imprima a média aritmética entre essas notas.
+    
+    int nota1, nota2, nota3;
+    printf("Insira as notas do aluno: \n");
+    scanf("%d%d%d", &nota1, &nota2, &nota3);
+    
+    printf("A média do aluno mencionado é: %d\n", (nota1+nota2+nota3)/3 );
+    
+    //3. Faça um programa que receba o valor de um depósito e o valor da 
+    //taxa de juros. Calcule e imprima o valor do rendimento e o valor 
+    //total depois do rendimento.
+    
+    float dep, juros;
+    printf("Insira o valor depositado, e o juros que caira sobre o valor\n");
+    scanf("%f%f", &dep, &juros);
+    
+    printf("O valor após o juros sobre o %f é: %f\n", dep, (juros/100)*dep+dep );
+    
+//4. Faça um programa que receba um número real e imprima:
+//• a parte inteira do número;
+//• a parte fracionária do número;
+//• arredondamento do número (sem casas decimais. Pesquise o floor(), ceil() e round()).
+
+float x;
+    printf("Insira o valor a ser exibido\n");
+    scanf("%f", &x);
+    printf("O valor em Fração é: %f\n", x);
+    int y = x;
+    printf("O valor em Real é: %d\n", y);
+    printf("O valor arrendondado por floor é: %f\n", floor(x));
+    printf("O valor arrendondado por ceil é: %f\n", ceil(x));
+    printf("O valor arrendondado por round é: %f\n", round(x));
+    
+//5. Faça um programa que receba um número inteiro, calcule e imprima:
+//• a raiz quadrada desse número (sqrt());
+//• esse número elevado ao quadrado.
+    float r;
+    printf("Informe o valor para ser calculado:\n");
+    scanf("%f", &r);
+    printf("A raiz quadrada de %f é: %f\n", r, sqrt(r));
+    printf("O valor elevado ao quadrado é: %f\n", r*r);
+
+//6. Faça um programa que receba a idade de uma pessoa em anos, 
+//calcule e imprima essa idade em: • Meses, Dias, Horas e Minutos.
+    int idade;
+    printf("Informe sua idade: \n");
+    scanf("%d", &idade);
+    printf("Considerando que seu aniversario seja agora você ja nasceu à (aproximadamente)");
+    printf(": %d meses", idade*12);
+    printf(", %d dias", idade*365);
+    printf(", %d horas", (idade*365)*24);
+    printf(", %d minutos \n", (idade*365*24)*60);
+    
+//7. Faça um programa que calcule a área de um triângulo.
+
+float Btri, Atri;
+printf("Informe a base do triângulo: ");
+scanf("%f", &Btri);
+printf("Agora informe a altura: ");
+scanf("%f", &Atri);
+printf("A area do triângulo informado é: %f\n", (Atri*Btri)/2);
+
+//8. Faça um programa que calcule e imprima a área de um círculo.
+float Rcirc;
+printf("Informe o Raio do circulo:");
+scanf("%f", &Rcirc);
+printf("A area do circulo informadopo: %f\n", 3.14*(Rcirc*Rcirc));
+
+//9. Faça um programa que calcule e imprima a área de um trapézio.
+float Btra, btra, Altra;
+printf("Informe a Base Maior do trapézio: ");
+scanf("%f", &Btra);
+printf("Informe agora a base menor: ");
+scanf("%f", &btra);
+printf("Por ultimo informe a altura: ");
+scanf("%f", &Altra);
+printf("A area do Trapézio é: %f", (Btra+btra)*Altra/2);
+
+//10. Faça um programa que receba o salário de um funcionário,
+//calcule e imprima o valor do imposto de renda a ser pago,
+//sabendo que o imposto equivale a 5% do salário.
+float sala;
+printf("Informe o salario do funcionario: ");
+scanf("%f", &sala);
+printf("O valor do imposto do funcionario é %f", sala/100*5);
+printf(" então o ele recebera %f no total.", sala-(sala/100*5));
+
+}

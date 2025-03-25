@@ -1,0 +1,311 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+    
+    /*
+    // 1
+    int valor;
+    
+    printf("Digite um valor em metros: \n");
+    scanf("%d\n", &valor);
+    
+    printf("O valor em decimetros é: %d\n", valor * 10);
+    printf("O valor em centimetros é: %d\n", valor * 100);
+    printf("O valor em milimetros é: %d\n", valor * 1000);
+    */
+
+    /*
+    // 2 Fazer um programa em C que imprime uma tabela com a tabuada de 1 a 9;
+    int val1, val2;
+    for (val1 = 1; val1 < 10; val1++){
+        for (val2 = 0; val2 < 11; val2++){
+            printf("%dx%d = %d\n", val1, val2, (val1*val2));
+        }
+    }
+    */
+    
+    /*
+    // 3
+    int numero_dec;
+    printf("Insira o valor de um número com vírgula: ");
+    scanf("%d",&numero_dec);
+    printf("Valor em Hex: %X, /* Octal: %o \n", numero_dec, numero_dec);
+    */
+    
+     /*
+     // 4
+    double grau;
+    int grau2;
+    
+    printf("Digite a temperatura em fahrenheit em real: ");
+    scanf("%lf", &grau);
+    
+    printf("dgite mais uma vez a temperatura em fahrenheit em inteiro: ");
+    scanf("%d", &grau2);
+    
+    printf("Em graus Celsius seria: %lf\n", (grau-32.0)*(5.0/9.0));
+    
+    printf("Em graus Celsius seria: %d", (grau2-32)*(5/9));
+    */
+
+    /*
+    // 5
+    float n1, n2, elevado1, elevado2;
+    
+    printf("Informe 2 numeros:\n");
+    scanf("%f%f", &n1,&n2);
+    
+    elevado1 = n1*n1;
+    elevado2 = n2*n2;
+    
+    // 5 A - soma dos dois numeros;
+    printf("A soma deles é: %f\n", n1+n2);
+    
+    // 5 B - O produto do primeiro numero pelo quadrado do segundo;
+    printf("O produto do primeiro pelo quadrado do segundo número é: %f\n", n1*elevado2);
+    
+    // 5 C - O quadrado do primeiro numero;
+    printf("o quadrado do primeiro número é: %f\n", elevado1);
+    
+    // 5 D - raiz quadrada da diferença dos valores ao quadrado;
+    printf("A raiz quadrada da soma dos quadrados de %f e %f é: %f\n", n1,n2, sqrt(elevado1-elevado2));
+    
+    //5 E - O seno da diferença do primeiro numero pelo segundo;
+    printf("O seno da diferença entre %f e %f é: %f\n",n1, n2, sin(n1 - n2));
+    
+    // 5 F - O modulo do primeiro numero;
+    printf("O modulo de %f é: %f\n",n1, fabs(n1));
+    */
+    
+    /*
+    // grupo 2 - 7
+    int num1, num2;
+    printf("Informe 2 valores\n");
+    scanf("%d%d",&num1,&num2);
+    
+    if (num1 < num2){
+        for(num1, num2; num1 <= num2; num1++){
+            printf("%d. ", num1);
+        }
+        
+    }else if( num1 > num2){
+        for(num1, num2; num1 >= num2; num1--){
+            printf("%d. ", num1);
+        }
+    }else{
+        printf("Valores Iguais");
+    }
+    */
+    
+    // grupo 2 - 8
+    /*
+    float preco, resultado;
+    
+    printf("Digite um preço de um produto: ");
+    scanf("%f", &preco);
+    
+    if(preco < 100){
+        printf("O valor inflacionado por 10% é: %f", preco * (10.0/100.0) + preco);
+    }
+    else if(preco >= 100){
+                printf("O valor inflacionado por 20% é: %f", preco * (20.0/100.0) + preco);
+    }
+    else{
+        printf("Número invalido!");
+    }
+    */
+    
+    
+    
+    /*
+    // atividade 8 ---------------- A
+    // utilizando for, esta sendo criado uma variavel do tipo char
+    //que a cada repetição aumenta uma letra maiuscula do alfabeto 
+    for (char c = 'A'; c <= 'Z'; c++) {
+        printf("%c ", c);
+    }
+
+    printf("\n");
+
+    // utilizando for, esta sendo criado uma variavel do tipo char
+    //que a cada repetição aumenta uma letra minuscula do alfabeto
+    for (char c = 'a'; c <= 'z'; c++) {
+        printf("%c ", c);
+    }
+    printf("\n");
+    
+    // atividade 8 ---------------- B
+    int numt, num;
+    for (num = 0; num<101; num++){
+        numt += num;
+    }
+    printf("A soma é %d\n ", numt);
+    
+    
+    // atividade 8 ---------------- C
+
+    int soma = 0;
+    
+    // dentro do for cria um int ja no primeiro numero par,
+    //e a cada rotação ele pula para o proximo numero par
+    for (int i = 2, count = 0; count < 100; i += 2, count++) {
+        soma += i;
+    }
+    printf("A soma dos 100 primeiros números pares é: %d\n", soma);
+    
+    
+    // atividade 8 ---------------- D
+    
+    float lado, perimetro = 0;
+
+    // Solicitando a medida do lado do pentágono
+    printf("Digite a medida dos 5 lados do pentágono: \n");
+    for (int i2 = 1; i2 < 6; i2++) { 
+    scanf("%f", &lado);
+        perimetro += lado;
+    }
+    printf("O perímetro do pentágono é: %.2f\n", perimetro);
+    */
+    
+    /*
+	//grupo 2 - 9
+	int idade1, idade2, idade3, idade4, idade5;
+	int maior, menor, soma;
+	float media;
+ 
+	printf("Digite 5 idades!\n");
+	scanf("%d%d%d%d%d", &idade1, &idade2, &idade3, &idade4, &idade5);
+ 
+	maior = idade1;
+	menor = idade1;
+ 
+	if (idade2 > maior) maior = idade2;
+	if (idade2 < menor) menor = idade2;
+ 
+	if (idade3 > maior) maior = idade3;
+	if (idade3 < menor) menor = idade3;
+ 
+	if (idade4 > maior) maior = idade4;
+	if (idade4 < menor) menor = idade4;
+ 
+	if (idade5 > maior) maior = idade5;
+	if (idade5 < menor) menor = idade5;
+ 
+	// Calculando a mC)dia
+	soma = idade1 + idade2 + idade3 + idade4 + idade5;
+	media = soma / 5.0;
+ 
+	// Exibindo os resultados
+	printf("\nMaior idade: %d\n", maior);
+	printf("Menor idade: %d\n", menor);
+	printf("Média das idades: %f\n"), media);
+	*/
+ 
+    /*
+    //grupo 2 - 10
+	int idade1, idade2, idade3, idade4, idade5;
+	float altura1, altura2, altura3, altura4, altura5;
+	int maisnovo, maisvelho;
+	float maisalto, maisbaixo;
+ 
+    printf("Digite 5 idades!\n");
+    scanf("%d%d%d%d%d", &idade1, &idade2, &idade3, &idade4, &idade5);
+    printf("Digite 5 alturas!\n");
+    scanf("%f%f%f%f%f", &altura1, &altura2, &altura3, &altura4, &altura5);
+	maisnovo = idade1;
+	maisvelho = idade1;
+ 
+	if (idade2 > maisnovo) maisvelho = idade2;
+	if (idade2 < maisvelho) maisnovo = idade2;
+ 
+	if (idade3 > maisnovo) maisvelho = idade3;
+	if (idade3 < maisvelho) maisnovo = idade3;
+ 
+	if (idade4 > maisnovo) maisvelho = idade4;
+	if (idade4 < maisvelho) maisnovo = idade4;
+ 
+	if (idade5 > maisnovo) maisvelho = idade5;
+	if (idade5 < maisvelho) maisnovo = idade5;
+	maisalto = altura1;
+	maisbaixo = altura1;
+ 
+	if (altura2 > maisalto) maisalto = altura2;
+	if (altura2 < maisbaixo) maisbaixo = altura2;
+ 
+	if (altura3 > maisalto) maisalto = altura3;
+	if (altura3 < maisbaixo) maisbaixo = altura3;
+ 
+	if (altura4 > maisalto) maisalto = altura4;
+	if (altura4 < maisbaixo) maisbaixo = altura4;
+ 
+	if (altura5 > maisalto) maisalto = altura5;
+	if (altura5 < maisbaixo) maisbaixo = altura5;
+ 
+	// Exibindo os resultados
+	printf("\nMais novo: %d\n", maisnovo);
+	printf("Mais velho: %d\n", maisvelho);
+	printf("\nMais alto: %g\n", maisalto);
+	printf("Mais baixo: %g\n", maisbaixo);
+	*/
+	/*
+	//grupo 2 - 11
+	float tereza = 1.70; 
+    float lola = 1.10;   
+    int anos = 0;        
+ 
+    while (lola <= tereza) {
+        tereza += 0.02; 
+        lola += 0.03;   
+        anos++;         
+    }
+ 
+    printf("Serão necessários %d anos para que Lola seja maior que Tereza.\n", anos);
+    */
+    
+    /*
+    // atv ------------------------ 10
+    double grau;
+    int grau2;
+    char choise;
+
+    printf("Digite de qual forma deseja digitar a temperatura Fahrenheit(F) ou Graus Celsius(G): ");
+    scanf(" %c", &choise); // Espaço antes de %c para evitar erro na leitura
+
+    if (choise == 'F' || choise == 'f') {
+        // Fahrenheit para Celsius
+        printf("\nDigite a temperatura em Fahrenheit em numero real: ");
+        scanf("%lf", &grau);
+
+        printf("\nDigite mais uma vez a temperatura em Fahrenheit em numero inteiro: ");
+        scanf("%d", &grau2);
+
+        printf("Em graus Celsius seria: %.2lf\n", (grau - 32.0) * (5.0 / 9.0));
+        printf("Em graus Celsius seria: %d\n", (int)((grau2 - 32) * (5.0 / 9.0))); // Corrigido
+
+    } else if (choise == 'G' || choise == 'g') {
+        // Celsius para Fahrenheit
+        printf("\nDigite a temperatura em Graus Celsius: ");
+        scanf("%lf", &grau);
+
+        printf("\nDigite mais uma vez a temperatura em Graus Celsius: ");
+        scanf("%d", &grau2);
+
+        printf("Em Fahrenheit seria: %.2lf\n", (grau * 9.0 / 5.0) + 32.0);
+        printf("Em Fahrenheit seria: %d\n", (int)((grau2 * 9.0 / 5.0) + 32.0)); // Corrigido
+
+    } else {
+        printf("Opção inválida!\n");
+    }
+    */
+}
