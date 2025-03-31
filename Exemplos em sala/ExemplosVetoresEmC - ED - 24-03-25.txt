@@ -1,0 +1,132 @@
+#include <studio.h>
+ 
+/* Vetores*/
+/*1 - Vetor simples com acesso manual*/
+
+int main() {
+    int numeros[5] = {10, 20, 30, 40, 50};
+   
+    printf("A posição 0: %d\n", numeros[0]);
+    printf("A posição 1: %d\n", numeros[1]);
+    printf("A posição 2: %d\n", numeros[2]);
+    printf("A posição 3: %d\n", numeros[3]);
+    printf("A posição 4: %d\n", numeros[4]);
+}
+
+ 
+/*2 - Percorrer vetor com FOR*/
+
+int main() {
+    int numeros[5] = {2, 4, 6, 8, 10};
+ 
+    for(int i = 1; i < 5; i++){
+        printf("numeros[%d] - %d\n", numeros[i]);
+    }
+ 
+    return 0;
+}
+
+ 
+/*3 - Lendo valores do tevlado e armazenando no vetor*/
+
+int main (){
+    int valores[3];
+ 
+    for(int i = 0; i < 3; i++){
+        printf("Digite o valor da posição %d: ", i);
+        scanf("%d", &valores[i]);
+    }
+ 
+    for(int i = 0; i < 3; i++){
+        printf("valores[%d] - %d\n", i, valores[i]);
+    }
+ 
+    return 0;
+}
+
+ 
+/*4 - Calcular a média das notas  usando vetor*/
+
+int main(){
+    float notas[4];
+    float soma = 0;
+    float media;
+ 
+    for(int i = 0; i < 4; i++){
+        printf("Digite a nota %d: ", i + 1);
+        scanf("%f", &notas[i]);
+        soma += notas[i];
+    }
+ 
+    media = soma / 4;
+ 
+    printf("Média das notas: %.2f\n", media);
+ 
+    return 0;
+}
+
+ 
+/*5 - Criando uma função que recebe um vetor como parâmetro*/
+
+    void mostrarvetor(int v[], int tamanho){
+        for(int i = 0; i < tamanho; i++){
+            printf("v[%d] = %d\n", i, v[i]);
+        }
+    }
+ 
+    int main(){
+        int dados[5] = {1, 3, 5, 7, 9};
+ 
+        mostrarvetor(dados, 5);
+ 
+        return 0;
+    }
+
+ 
+/*6 - Função que calcula a soma dos elementos do vetor*/
+
+    int somarElementos(int v[], int tamanho){
+        int soma = 0;
+ 
+        for(int i = 0; i < tamanho; i++){
+            soma += v[i];
+        }
+ 
+        return soma;
+    }
+ 
+    int main(){
+        int numeros[] = {10, 20, 30, 40, 50};
+ 
+        int resultado = somarRlementos(numeros, 5);
+ 
+        printf("Soma: %d\n", resultado);
+ 
+        return 0;
+    }
+
+ 
+/*7 - Encontrando o maior e o menor valor*/
+
+    void encontrarMaiorMenor(int v[], int tamanho){
+        int maior = v[0];
+        int menor = v[0];
+ 
+        for(int i = 1; i < tamanho; i++){
+            if(v[i] > maior) maior = v[i];
+            if(v[i]< menor) menor = v[i];
+        }
+ 
+        printf("Maior: %d\n", maior);
+        printf("Menor: %d\n", menor);
+    }
+ 
+    int main(){
+        int valores[] = {12, 5, 78, 3, 42};
+ 
+        encontrarMaiorMenor(valores, 5);
+ 
+        return 0;
+    }
+ 
+vetores
