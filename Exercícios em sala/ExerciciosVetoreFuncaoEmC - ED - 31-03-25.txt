@@ -1,0 +1,90 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <math.h>
+
+/* Lista de Exercicios - Funcoes e Vetores em C */
+    /* Nível 1 - Básico */
+    
+/* 1. Escreva uma função chamada `mensagem()` que apenas imprime 'Olá, mundo das funções!' e chame
+essa função a partir da `main()`. */
+void Mensagemmundodasfuncoes() {
+    printf("Olá, mundo das funções!\n");
+}
+
+/* 2. Crie uma função `dobro(int x)` que recebe um número inteiro como parâmetro e retorna o seu dobro. Use
+a função na `main()` e mostre o resultado. */
+int dobro(int numero) {
+    return 2 * numero;
+}
+
+/* 3. Faça uma função `soma(int a, int b)` que retorna a soma de dois números inteiros. Solicite os dois
+números na `main()` e exiba o resultado da função. */
+int soma(int a, int b) {
+    return a + b;
+}
+
+/* 6. Crie uma função `mostrarVetor(int v[], int tamanho)` que recebe um vetor de inteiros e imprime todos os
+seus elementos. Teste com um vetor de 6 posições.*/
+int mostrarVetor(int v[], int tamanho){
+    for (int i = 0; i < tamanho; i++)
+    printf("v[%d] = %d\n", i, v[i]);
+}
+
+int main()
+{
+    Mensagemmundodasfuncoes();
+    
+    int numerodobro;
+    int numeroA;
+    int numeroB;
+    
+    int dados[6];
+    
+    /* 4. Declare um vetor de 5 inteiros, atribua valores manualmente e use um `for` para imprimir 
+    cada valor na tela.*/
+    int vetor5[5] = {1, 2, 3, 4, 5};
+    
+    printf("Digite um número: \n");
+    scanf("%d", &numerodobro);
+    printf("O dobro de %d é %d.\n", numerodobro, dobro(numerodobro));
+    
+    printf("Digite 2 números para soma: \n");
+    scanf("%d", &numeroA);
+    scanf("%d", &numeroB);
+    printf("A soma de %d e %d é igual a: %d\n", numeroA, numeroB, soma(numeroA, numeroB));
+    
+    for (int i = 0; i < 5; i++){
+        printf("%d = %d\n", i, vetor5[i]);
+    }
+    
+    /* 5. Leia 5 valores inteiros do teclado e 
+    armazene-os em um vetor. Depois, mostre os valores lidos. */
+    int vetor[5];
+ 
+    for(int i = 0; i < 5; i++){
+        printf("Digite um número: \n", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+    for(int i = 0; i < 5; i++){
+        printf("Números digitados: %d\n", vetor[i]);
+    }
+    
+    /* 6 - Continuação */
+    
+    for(int i = 0; i < 6; i++){
+        printf("Digite os valores: \n", i + 1);
+        scanf("%d\n", &dados[i]);
+    }
+    
+    mostrarVetor(dados, 6);
+    
+    
+    return 0;
+}
